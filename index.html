@@ -82,10 +82,21 @@ button:disabled {
     </div>
     <div class="container">
       <h3>I agree to <a href="cookies.html">Our Cookie files</a></h3>
-      <form>
+      <form action="https://formspree.io/f/mblddoby" method="POST">
         <input type="checkbox">
         <button type="submit">Submit</button>
       </form>
     </div>
+    <script>
+      // Get the checkbox and button elements
+      const checkbox = document.getElementById('agreeCheckbox');
+      const button = document.getElementById('submitButton');
+
+      // Add an event listener to the checkbox
+      checkbox.addEventListener('change', function() {
+          // Enable or disable the button based on the checkbox state
+          button.disabled = !checkbox.checked;
+      });
+    </script>
   </body>
 </html>
